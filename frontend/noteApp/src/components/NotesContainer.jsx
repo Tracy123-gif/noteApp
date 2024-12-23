@@ -22,8 +22,8 @@ const NotesContainer = () => {
   return (
     <div className='p-4 h-full border-2  w-full  mt-10'>
       {
-        notes.length > 0 ? <div className='grid lg:grid-cols-3 gap-6 sm:grid-col-1 justify-center items-center '>{notes.map((note, key)=>(
-          <Note key={note.id} noteData={note}  />
+        notes.length > 0 ? <div className='grid lg:grid-cols-3 gap-6 sm:grid-col-1 justify-center items-center '>{notes.map((note)=>(
+          <Note noteData={note} key={note._id}  />
         ))}</div> :
         <h1 className='text-4xl text-center'>no notes</h1>
       }
